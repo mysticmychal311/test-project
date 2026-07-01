@@ -1,17 +1,199 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blayce Wilson — Horror Storyteller</title>
+<meta name="description" content="Official site of Blayce Wilson. Cozy horror stories, late-night uploads, and things that go bump on TikTok, Instagram & YouTube.">
+
+<!-- Fonts: Cinzel (engraved display), Cormorant Garamond (elegant italic accents), Work Sans (clean modern body), JetBrains Mono (labels) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,500;1,500;1,600&family=Work+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Hello, World!</h1>
-    <p>
-        happy to be coding with you!
+
+<!-- ===================== AMBIENT BACKGROUND LAYERS ===================== -->
+<div class="ambient" aria-hidden="true">
+  <div class="stars"></div>
+  <div class="fog fog--back"></div>
+  <div class="fog fog--front"></div>
+  <div class="grain"></div>
+</div>
+
+<!-- ===================== NAV ===================== -->
+<header class="nav" id="top">
+  <a href="#top" class="brand">
+    <span class="brand__mark" aria-hidden="true">
+      <svg viewBox="0 0 64 64" class="mark-svg">
+        <circle cx="32" cy="32" r="30" class="mark-ring"/>
+        <path d="M20 12 C 24 22, 24 30, 18 36" class="mark-flourish"/>
+        <path d="M44 12 C 40 22, 40 30, 46 36" class="mark-flourish"/>
+        <text x="32" y="40" text-anchor="middle" class="mark-letters">BW</text>
+        <circle cx="32" cy="16.5" r="1.6" class="mark-star"/>
+      </svg>
+    </span>
+    <span class="brand__word">
+      <span class="brand__name">Blayce Wilson</span>
+      <span class="brand__tag">tales after dark</span>
+    </span>
+  </a>
+
+  <nav class="nav__links" aria-label="Primary">
+    <a href="#uploads">Uploads</a>
+    <a href="#about">About</a>
+    <a href="#socials">Follow</a>
+  </nav>
+
+  <div class="nav__socials" aria-label="Social links">
+    <a href="https://www.tiktok.com/@blaycewilson" target="_blank" rel="noopener" aria-label="Blayce Wilson on TikTok" class="icon-btn">
+      <svg viewBox="0 0 24 24"><path d="M16.6 5.82c-.9-.83-1.47-2-1.6-3.32h-3.02v13.9a3.14 3.14 0 1 1-2.24-3.01V9.9a6.1 6.1 0 1 0 5.26 6.03V8.4a8.2 8.2 0 0 0 4.8 1.54V6.9a5.6 5.6 0 0 1-3.2-1.08z"/></svg>
+    </a>
+    <a href="https://www.instagram.com/blaycewilson" target="_blank" rel="noopener" aria-label="Blayce Wilson on Instagram" class="icon-btn">
+      <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.15" cy="6.85" r="1.1"/></svg>
+    </a>
+    <a href="https://www.youtube.com/@blaycewilson" target="_blank" rel="noopener" aria-label="Blayce Wilson on YouTube" class="icon-btn">
+      <svg viewBox="0 0 24 24"><rect x="2.5" y="5.5" width="19" height="13" rx="4" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M10.3 9.2 15 12l-4.7 2.8z"/></svg>
+    </a>
+  </div>
+
+  <button class="nav__burger" id="burgerBtn" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<!-- mobile menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#uploads">Uploads</a>
+  <a href="#about">About</a>
+  <a href="#socials">Follow</a>
+</div>
+
+<main>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero">
+    <p class="hero__eyebrow">— now streaming nightmares —</p>
+    <h1 class="hero__title">
+      Step into the <span class="hero__title-em">shadows</span>,<br>
+      stay for the <span class="hero__title-em">warmth</span>.
+    </h1>
+    <p class="hero__sub">
+      Blayce Wilson tells horror stories the way a good fire tells you it's safe to stay up late —
+      flickering, a little dangerous, impossible to look away from. New uploads every week.
     </p>
-    <div>
-        this is text simulating new features of the new code editor.
+    <div class="hero__actions">
+      <a href="#uploads" class="btn btn--primary">Watch the latest</a>
+      <a href="#socials" class="btn btn--ghost">Find me online</a>
     </div>
+
+    <div class="hero__candle" aria-hidden="true">
+      <div class="candle__flame"></div>
+      <div class="candle__glow"></div>
+      <div class="candle__wax"></div>
+    </div>
+  </section>
+
+  <!-- ===================== SHOWCASE / NEW UPLOADS ===================== -->
+  <section class="uploads" id="uploads">
+    <div class="section-head">
+      <p class="section-eyebrow">latest drops</p>
+      <h2 class="section-title">Fresh from the crypt</h2>
+      <p class="section-desc">The newest stories, ranked encounters, and late-night ramblings. Updated weekly — bookmark the graveyard.</p>
+    </div>
+
+    <div class="upload-grid" id="uploadGrid">
+      <!-- Cards are injected by script.js from the UPLOADS array below -->
+    </div>
+  </section>
+
+  <!-- ===================== ABOUT ===================== -->
+  <section class="about" id="about">
+    <div class="about__portrait" aria-hidden="true">
+      <div class="portrait__frame">
+        <div class="portrait__glow"></div>
+        <svg viewBox="0 0 200 240" class="portrait__silhouette">
+          <path d="M100 10c-38 0-62 30-62 66 0 20 8 36 18 48-30 14-48 40-48 74v20a2 2 0 0 0 2 2h180a2 2 0 0 0 2-2v-20c0-34-18-60-48-74 10-12 18-28 18-48 0-36-24-66-62-66z"/>
+        </svg>
+        <div class="portrait__eyes">
+          <span></span><span></span>
+        </div>
+      </div>
+    </div>
+    <div class="about__copy">
+      <p class="section-eyebrow">who's telling the story</p>
+      <h2 class="section-title">About Blayce</h2>
+      <p>
+        I've been chasing the things under the bed since I was old enough to hold a flashlight.
+        Now I point a camera at them instead. Every upload is one part folklore, one part
+        found-footage, and one part "let's figure this out together, with the lights low
+        and the door locked."
+      </p>
+      <p>
+        No jump-scare farming, no cheap gore — just slow-build dread, real research, and the
+        occasional candle that flickers when it really shouldn't.
+      </p>
+      <ul class="about__stats">
+        <li><span>150+</span>stories told</li>
+        <li><span>Weekly</span>new uploads</li>
+        <li><span>3</span>platforms haunted</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===================== SOCIALS ===================== -->
+  <section class="socials" id="socials">
+    <div class="section-head">
+      <p class="section-eyebrow">come find me</p>
+      <h2 class="section-title">Follow the flicker</h2>
+      <p class="section-desc">Same name, every platform — <span class="mono">@blaycewilson</span>.</p>
+    </div>
+
+    <div class="social-grid">
+      <a class="social-card" href="https://www.tiktok.com/@blaycewilson" target="_blank" rel="noopener">
+        <span class="social-card__icon">
+          <svg viewBox="0 0 24 24"><path d="M16.6 5.82c-.9-.83-1.47-2-1.6-3.32h-3.02v13.9a3.14 3.14 0 1 1-2.24-3.01V9.9a6.1 6.1 0 1 0 5.26 6.03V8.4a8.2 8.2 0 0 0 4.8 1.54V6.9a5.6 5.6 0 0 1-3.2-1.08z"/></svg>
+        </span>
+        <span class="social-card__name">TikTok</span>
+        <span class="social-card__handle">@blaycewilson</span>
+        <span class="social-card__arrow">↗</span>
+      </a>
+
+      <a class="social-card" href="https://www.instagram.com/blaycewilson" target="_blank" rel="noopener">
+        <span class="social-card__icon">
+          <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.15" cy="6.85" r="1.1"/></svg>
+        </span>
+        <span class="social-card__name">Instagram</span>
+        <span class="social-card__handle">@blaycewilson</span>
+        <span class="social-card__arrow">↗</span>
+      </a>
+
+      <a class="social-card" href="https://www.youtube.com/@blaycewilson" target="_blank" rel="noopener">
+        <span class="social-card__icon">
+          <svg viewBox="0 0 24 24"><rect x="2.5" y="5.5" width="19" height="13" rx="4" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M10.3 9.2 15 12l-4.7 2.8z"/></svg>
+        </span>
+        <span class="social-card__name">YouTube</span>
+        <span class="social-card__handle">@blaycewilson</span>
+        <span class="social-card__arrow">↗</span>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer">
+  <div class="footer__brand">
+    <span class="footer__mark" aria-hidden="true">BW</span>
+    <span>Blayce Wilson</span>
+  </div>
+  <p class="footer__note">Leave the porch light on. New stories every week.</p>
+  <p class="footer__copy">© <span id="year"></span> Blayce Wilson. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
